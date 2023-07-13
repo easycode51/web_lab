@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+   <script>
+
+   	function vali()
+   	{
+   	 var reg = document.getElementById('regno').value;
+   	 var sub = document.getElementById('subcode').value;
+   	 var a = parseInt(document.getElementById('test1').value);
+   	 var b = parseInt(document.getElementById('test2').value);
+   	 var c = parseInt(document.getElementById('test3').value);
+
+   	 var hm1;
+   	 var hm2;
+   	 var min;
+   	 var avg;
+     
+     hm1 = Math.max(a,b,c);
+     min = Math.min(a,b,c);
+
+     if (a>=b && a>=c)
+     {
+       if (b>=c)
+       {
+       	hm2=b;
+       }
+       else
+       {
+       	hm2=c;
+       }	
+     }
+     else if (b>=c)
+     {
+     	if (a>=c)
+     	{
+     		hm2=a;
+     	}
+     	else
+     	{
+     		hm2=c;
+     	}
+     }
+     else
+     {
+     	if (a>=b)
+     	{
+     		hm2=a;
+     	}
+     	else
+     	{
+     		hm2=b;
+     	}
+     }
+
+     avg=(hm1+hm2)/2;
+
+     document.write("<br> 1st best mark:"+hm1);
+     document.write("<br> 2st best mark:"+hm2);
+     document.write("<br> Avg of best two mark:"+avg);
+   }
+   </script>
+</head>
+<body>
+<form name="myform">
+   <label>Reg No:</label>
+   <input type="text" id="regno"> <br></br>
+   
+   <label>Subject Code:</label>
+   <input type="text" id="subcode"> <br></br>
+   
+   <label>Test 1 mark:</label>
+   <input type="text" id="test1"> <br></br>
+
+   <label>Test 2 mark:</label>
+   <input type="text" id="test2"> <br></br>
+
+   <label>Test 3 mark:</label>
+   <input type="text" id="test3"> <br></br>
+
+   <input type="reset" value="Reset">
+</form>
+   <button onclick="vali();">Submit</button>
+</body>
+</html>

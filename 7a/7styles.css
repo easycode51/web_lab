@@ -1,0 +1,17 @@
+#calc_window{
+	max-width: 400px;
+	max-height: 500px;
+	border: 1px solid black;
+	margin: auto;
+	padding: 2px;
+	background-color: yellow;
+}
+
+ td{
+	border: 1px solid black;
+	text-align: center;
+ }
+
+ td:hover{
+ 	background-color: pink;
+ }

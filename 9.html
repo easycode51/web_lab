@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<body>
+	<h1>FORM WITH VALIDATION</h1>
+    
+    <form name="myform">
+    	<label>User ID:</label>
+    	<input type="text" id="userid"> <br><br>
+
+    	<label>Name:</label>
+    	<input type="text" id="name"> <br><br>
+
+    	<label>Password:</label>
+    	<input type="text" id="password"> <br><br>
+
+    	<label>Email:</label>
+    	<input type="email" id="email"> <br><br>
+    </form>
+        <button onclick="validate();">Validate Form</button>
+
+    <script type="text/javascript">
+    	function validate()
+    	{
+    		var vid = document.getElementById('userid').value;
+    		var vname = document.getElementById('name').value;
+    		var vpass = document.getElementById('password').value;
+    		var vemail = document.getElementById('email').value;
+
+    		if( vid.length<5 || vid.length>15 )
+    		{
+    			alert("User ID must be of length 5 to 12");
+    			return false;
+    		}
+
+    		if( vname == "")
+    		{
+    			alert("Please enter your name");
+    			return false;
+    		}    		
+
+    		if( (vname.length>15) || (vname.match(/[@\#\$\%\^\&]/)) )
+    		{
+    			alert("The name must be less than 15 character and no special symbol is allowed");
+    			return false;
+    		}
+
+    		if( vpass.length<8 )
+    		{
+    			alert("Password be be of length >8 , One upper case, One special symbol");
+    			return false;
+    		}
+
+    		if( !vpass.match(/[0-9A-Z]/))
+    		{
+    		   alert("Password be be of length >8 , One upper case, One special symbol");
+    		   return false;	
+    		}
+
+    		if( !vpass.match(/[~\!\@\#\$\%\^\&\*]/))
+    		{
+    		   alert("Password be be of length >8 , One upper case, One special symbol");
+    		   return false;	
+    		}
+
+            if( vemail == "")
+    		{
+    			alert("Enter an email");
+    		}
+
+    		if( !vemail.match(/[@]/) || !vemail.match(/[.]/)  )
+    		{
+    			alert("Please enter a valid email address");
+    			return false;
+    		}
+
+    		document.write("The Form is Submitted Successfully!");
+        }
+    </script>
+	
+</body>
+</html>

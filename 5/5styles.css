@@ -1,0 +1,56 @@
+body{
+	background-image: url("razerlogo.png");
+	background-repeat: repeat;
+	background-size: 200px 200px;
+	}
+
+.middle_element{
+				width: 500px;
+				height: 900px;
+				margin: auto;
+				padding: auto;
+				background-color: pink;
+				text-align: center;
+			   }
+
+h1{
+   font-family: arial;
+}
+
+h2{
+   font-family: tahoma;
+}
+
+h3{
+  font-family: sans-serif;
+}
+
+h4{
+  font-family:"Times New Roman";
+}
+
+.visible{
+	display: block;
+	visibility: visible;
+}
+
+.hidden{
+	display: block;
+	visibility: hidden;
+}
+
+a:link{
+	   color: blue;
+      }
+
+a:visited{
+	   color: darkgrey;
+      }
+
+a:hover{
+	   color: red;
+      }
+
+a:active{
+	   color: white;
+      }
